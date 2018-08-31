@@ -33,3 +33,16 @@ def key_for_min_value(name_hash)
   mk
 end
 
+#TO Return KEY of GRETEST VALUE
+def key_for_greatest_value(name_hash)
+  greatest_key = nil && greatest_value = nil
+  name_hash.each do |k, v|
+     #By reversing the sign we get greatest
+    if greatest_value == nil || v >      greatest_value
+       greatest_value = v
+       greatest_key = k
+    end
+  end
+  greatest_key
+end
+key_for_greatest_value(name_hash)
